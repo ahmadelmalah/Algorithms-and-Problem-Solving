@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Two Egg General Solution</title>
+  </head>
+  <body>
+    <script>
+      var floors = prompt('Enter the number of floors');
+      var coveredFloors=0;
+      var startingThrow=0;
+      while (coveredFloors<floors) {
+        coveredFloors = numberOfFloorsCovered(++startingThrow);
+      }
+
+      alert(startingThrow);
+
+      function numberOfFloorsCovered(x){
+        var num=0;
+        for (var i = 1; i <= x; i++) {
+          num+=i;
+        }
+        return num;
+      }
+    </script>
+  </body>
+</html>
